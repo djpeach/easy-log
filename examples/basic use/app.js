@@ -1,5 +1,5 @@
-const dbLogger = require('logger')('db', { formatted: true });
-const routeLogger = require('logger')('route');
+const dbLogger = require('../../')('db', { formatted: true });
+const routeLogger = require('../../')('route');
 
 // const dbLogger = logger('db');
 dbLogger('testing the db logger');
