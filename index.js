@@ -10,11 +10,12 @@ var lotsOColorCodes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18
 
 var enabledNamespaces = process.env.DEBUG ? process.env.DEBUG.split(",") : [];
 
-function createLogger(namespace, { formatted, color, includeFunction, includeFile } = {}) {
+function createLogger(namespace, { formatted, color, includeFunction, includeFile, includeLineNumber } = {}) {
     logger.formatted = formatted ? true : false;
     logger.color = color ? color : limitedColorCodes[pickColor(namespace)];
     logger.includeFunction = includeFunction ? includeFunction : true;
     logger.includeFile = includeFile ? includeFile : true;
+    logger.includeLineNumber = includeLineNumber ? includeLineNumber : true;
     logger.namespace = namespace;
 
     function logger(data) {
@@ -24,8 +25,9 @@ function createLogger(namespace, { formatted, color, includeFunction, includeFil
             const functionName = logger.includeFunction ? theFunctionName() : '';
             let logTrace = fileName !== '' || functionName !== '' ? ` |` : ' ';
             logTrace += functionName !== '' ? ` ${theFunctionName()} ` : '';
-            const space = functionName !== '' ? '' : ' ';
-            logTrace += fileName !== '' ? `${space}${theFileName()} ` : '';
+            const fileSpace = functionName !== '' ? '' : ' ';
+            logTrace += fileName !== '' ? `${fileSpace}${theFileName()}` : '';
+            logTrace += logger.includeLineNumber ? `:${theLineNumber()} ` : ' ';
             console.log(colorPrefix(`${namespace}${logTrace}-> `) + `${data}`);
         }
     }
@@ -48,11 +50,32 @@ function pickColor(namespace) {
 }
 
 function theFileName() {
-    return 'filename.ext';
+    const filePath = __stack[2].getFileName();
+    const filePathArray = filePath.split('/');
+    const simpleFileName = filePathArray[filePathArray.length - 1];
+    return simpleFileName;
 }
 
 function theFunctionName() {
-    return 'myFunction';
+    return __stack[2].getFunctionName() ? __stack[2].getFunctionName() : 'Top Level';
 }
+
+function theLineNumber() {
+    return __stack[2].getLineNumber();
+}
+
+Object.defineProperty(global, '__stack', {
+    get: function () {
+        var orig = Error.prepareStackTrace;
+        Error.prepareStackTrace = function (_, stack) {
+            return stack;
+        };
+        var err = new Error;
+        Error.captureStackTrace(err, arguments.callee);
+        var stack = err.stack;
+        Error.prepareStackTrace = orig;
+        return stack;
+    }
+});
 
 module.exports = createLogger;
