@@ -9,6 +9,8 @@ var lotsOColorCodes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18
 // }
 
 var enabledNamespaces = process.env.DEBUG ? process.env.DEBUG.split(",") : [];
+const enabledAllNamespaces = enabledNamespaces.includes('*');
+console.log(enabledAllNamespaces);
 
 function createLogger(namespace, { formatted, color } = {}) {
     logger.formatted = formatted ? true : false;
