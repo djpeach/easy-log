@@ -50,21 +50,21 @@ function pickColor(namespace) {
 }
 
 function theFileName() {
-    const filePath = __stack[2].getFileName();
+    const filePath = currentStack[2].getFileName();
     const filePathArray = filePath.split('/');
     const simpleFileName = filePathArray[filePathArray.length - 1];
     return simpleFileName;
 }
 
 function theFunctionName() {
-    return __stack[2].getFunctionName() ? __stack[2].getFunctionName() : 'Top Level';
+    return currentStack[2].getFunctionName() ? currentStack[2].getFunctionName() : 'Top Level';
 }
 
 function theLineNumber() {
-    return __stack[2].getLineNumber();
+    return currentStack[2].getLineNumber();
 }
 
-Object.defineProperty(global, '__stack', {
+Object.defineProperty(global, 'currentStack', {
     get: function () {
         var orig = Error.prepareStackTrace;
         Error.prepareStackTrace = function (_, stack) {
