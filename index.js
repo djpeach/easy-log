@@ -9,16 +9,28 @@ var lotsOColorCodes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18
 // }
 
 var enabledNamespaces = process.env.DEBUG ? process.env.DEBUG.split(",") : [];
+const enabledAllNamespaces = enabledNamespaces.includes('*');
+console.log(enabledAllNamespaces);
 
-function createLogger(namespace, { formatted, color } = {}) {
+function createLogger(namespace, { formatted, color, includeFunction, includeFile, includeLineNumber } = {}) {
     logger.formatted = formatted ? true : false;
     logger.color = color ? color : limitedColorCodes[pickColor(namespace)];
+    logger.includeFunction = includeFunction ? includeFunction : true;
+    logger.includeFile = includeFile ? includeFile : true;
+    logger.includeLineNumber = includeLineNumber ? includeLineNumber : true;
     logger.namespace = namespace;
 
     function logger(data) {
         if (enabledNamespaces.includes(namespace)) {
-            let prefix = colorizer.xterm(logger.color);
-            console.log(prefix(`${namespace} -> `) + `${data}`);
+            const colorPrefix = colorizer.xterm(logger.color);
+            const fileName = logger.includeFile ? theFileName() : '';
+            const functionName = logger.includeFunction ? theFunctionName() : '';
+            let logTrace = fileName !== '' || functionName !== '' ? ` |` : ' ';
+            logTrace += functionName !== '' ? ` ${theFunctionName()} ` : '';
+            const fileSpace = functionName !== '' ? '' : ' ';
+            logTrace += fileName !== '' ? `${fileSpace}${theFileName()}` : '';
+            logTrace += logger.includeLineNumber ? `:${theLineNumber()} ` : ' ';
+            console.log(colorPrefix(`${namespace}${logTrace}-> `) + `${data}`);
         }
     }
 
@@ -38,5 +50,34 @@ function createLogger(namespace, { formatted, color } = {}) {
 function pickColor(namespace) {
     return [...namespace].reduce((valTotal, char) => valTotal + char.charCodeAt(0), 0) % limitedColorCodes.length;
 }
+
+function theFileName() {
+    const filePath = currentStack[2].getFileName();
+    const filePathArray = filePath.split('/');
+    const simpleFileName = filePathArray[filePathArray.length - 1];
+    return simpleFileName;
+}
+
+function theFunctionName() {
+    return currentStack[2].getFunctionName() ? currentStack[2].getFunctionName() : 'Top Level';
+}
+
+function theLineNumber() {
+    return currentStack[2].getLineNumber();
+}
+
+Object.defineProperty(global, 'currentStack', {
+    get: function () {
+        var orig = Error.prepareStackTrace;
+        Error.prepareStackTrace = function (_, stack) {
+            return stack;
+        };
+        var err = new Error;
+        Error.captureStackTrace(err, arguments.callee);
+        var stack = err.stack;
+        Error.prepareStackTrace = orig;
+        return stack;
+    }
+});
 
 module.exports = createLogger;
