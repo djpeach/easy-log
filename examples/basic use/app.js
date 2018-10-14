@@ -1,4 +1,4 @@
-const dbLogger = require('../../')('db', { formatted: true });
+const dbLogger = require('../../')('db');
 const routeLogger = require('../../')('route');
 
 dbLogger.enable();

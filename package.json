@@ -1,13 +1,17 @@
 {
-  "name": "logger",
-  "version": "1.0.0",
-  "description": "",
+  "name": "debug-all",
+  "version": "0.0.0",
+  "description": "A debugger that *will* do it all",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "debug",
+    "log",
+    "debugger"
+  ],
+  "author": "Daniel Peach",
   "license": "ISC",
   "dependencies": {
     "cli-color": "^1.3.0"
