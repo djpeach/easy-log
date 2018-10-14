@@ -89,5 +89,34 @@ So in file app.js:
 The above will log out:
 
 ```
-db | 
+db | logFunc() app.js:4 -> This is logging out somewhere
+db | Top Level app.js:9 -> This is logging out somewhere else
 ```
+
+In reality, these will be colored. Also, notice `Top Level`. This is what will be the function if it is not in a function, and is just a top level call.
+
+### `COLORS!`
+
+And lots of them! You can pick your own color, or one will be picked for you. And each logger will be its own color. No two will have the same color, and they will keep their colors across program runs. So, unless configured, the namespace 'db' will always be blue, and 'route' will always be red. Here is the syntax if you want to choose your own color: 
+
+```
+const dbLogger = require('../../')('db', { colorCode: 163 });
+const routeLogger = require('../../')('route', { colorCode: 77 });
+
+dbLogger('Lets see the db color now'); // Now will be pink
+routesLogger('Lets see the routes color now'); // Now will be neon green
+```
+
+Remember that since every logger has its own color, the following won't work, and you will get a white log instead.
+
+```
+const dbLogger = require('../../')('db', { colorCode: 163 });
+const routeLogger = require('../../')('route', { colorCode: 163 });
+
+dbLogger('Lets see the db color now'); // Now will be pink
+routesLogger('Lets see the routes color now'); // Now will be white :(
+```
+
+# That's it! (for now)
+
+I can think of a million and one new things to add, and I am excited to add them. However, if you think of anything, please let me know by submitting a issue with my feature request template on github!

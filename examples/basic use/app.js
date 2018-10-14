@@ -1,5 +1,5 @@
-const dbLogger = require('../../')('db');
-const routeLogger = require('../../')('route');
+const dbLogger = require('../../')('db', { colorCode: 163 });
+const routeLogger = require('../../')('route', { colorCode: 77 });
 
 dbLogger.enable();
 routeLogger.enable();
