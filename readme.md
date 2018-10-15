@@ -1,6 +1,6 @@
 # easy-log
 
-![basic_example](https://user-images.githubusercontent.com/31779571/46979349-5b017600-d09f-11e8-86e5-aa00acbf9544.png)
+![basic_example](https://user-images.githubusercontent.com/31779571/46981232-77a0ac80-d0a5-11e8-99e5-3de868426683.png)
 
 A debugging module that grew out of a dissatisfaction of all other current modules for logging and debugging. Features all other dubugging features I could find, and some additional configurations, stack tracing, and options.
 
@@ -20,34 +20,36 @@ Using `const logger = require('easy-log')('app')` exposes a function that will n
 
 A basic use case with a few different name-spaced loggers, and a couple different files
 
-app.js
+Example [app.js](https://github.com/djpeach/easy-log/blob/master/examples/basic%20use/app.js)
+
 ```js
 const express = require('express')
-    , basicLog = require('../../')('app:basic')
-    , dbLog = require('../../')('app:db')
-    , mongoose = require('mongoose')
+    , basicLogger = require('easy-log')('app:basic', { colorCode: 199 })
+    , dbLogger = require('easy-log')('app:db:', { colorCode: 226 })
+    , mongoose = require('mongoose');
 
 const app = express();
 const name = "Example Application";
 
-basicLog(`Booting ${name}`);
+basicLogger(`Booting ${name}`);
 
 mongoose.connect("mongodb://localhost/example", { useNewUrlParser: true })
-    .then(() => { dbLog(`app.js -> Mongod DB connected successfully`); })
-    .catch((err) => { dbLog(`app.js -> Mongo DB could not connect: ${err}`); });
+    .then(() => { dbLogger(`Mongod DB connected successfully`); })
+    .catch((err) => { dbLogger(`Mongo DB could not connect: ${err}`); });
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => { basicLog(`App listening on port ${port}`); });
+app.listen(port, () => { basicLogger(`App listening on port ${port}`); });
 
 // Use some imaginary worker file
 require('./worker');
 ```
 
-worker.js
+Example [worker.js](https://github.com/djpeach/easy-log/blob/master/examples/basic%20use/worker.js)
+
 ```js
-const dbLogger = require('../../')('app:db')
-    , basicLogger = require('../../')('app:basic');
+const dbLogger = require('easy-log')('app:db', { colorCode: 40 })
+    , basicLogger = require('easy-log')('app:basic', { colorCode: 45 });
 
 function dbWork() {
     dbLogger('doing lots of uninteresting database work');
@@ -57,21 +59,118 @@ function dbWork() {
 dbWork();
 
 function basicWork() {
-    basicLogger('doing some basic work');
+    basicLogger('doing some basic work:b');
     setTimeout(basicWork, Math.random() * 2000);
 }
 
 basicWork();
 ```
 
-run `DEBUG=app:* node app.js`
+### run `DEBUG=app:* node app.js`
 
-**Result**
-***
+## Result
 
-![basic_example](https://user-images.githubusercontent.com/31779571/46979349-5b017600-d09f-11e8-86e5-aa00acbf9544.png)
+![basic_example](https://user-images.githubusercontent.com/31779571/46981232-77a0ac80-d0a5-11e8-99e5-3de868426683.png)
 
-## Color Codes
+# Features
+
+## Name Spaces
+
+When you create a logger, simple pass it a namespace as well, and it will only output when that namespace is specified either in code or in the run script.
+
+```js
+const logger = require('easy-log'); // Will default to '' and will always work
+const logger2 = require('easy-log')('debugging') // Now will only output when the 'debugging' namespace is enabled
+```
+
+Note that a logger without a namespace will always output, and in fact, cannot be turned off.
+
+## Enabling/Disabling namespaces
+
+When you want to enable or disable a namespace you currently have two options. 
+
+### In code:
+
+```js
+logger.enable();
+logger.disable();
+```
+
+### With run script
+
+Enabling a namespace
+
+```
+DEBUG=debugging
+
+// OR
+
+DEBUG=debugging,other-namespace
+
+// OR
+
+DEBUG=debugging other-namespace
+```
+
+Notice the runs script can set the DEBUG environmental variable(s) with commas, or spaces.
+
+Specifically Disabling a namespace
+```
+DEBUG=debugging,-other-namespace
+```
+
+The `-` tells the logger to disable. If you put `DEBUG=debugging,-debugging`, the last one gets run last and so the `debugging` namespace logger will not work. This works really well in conjunction with wildcards.
+
+## Wildcards
+
+Instead of enabling every namespace, or listing every one in the run script, you can use wildcards. Wildcards can only be added in the run scripts
+
+```
+DEBUG=* // Will run every namespace (including some global node ones you might not want)
+
+DEBUG=app:* // Will run every namespace that is a child of `app` (`app:db`, `app:error`, etc)
+
+DEBUG=app:*,-app:db // Will run every namespace that is a child of `app` EXCEPT `app:db`
+```
+
+## Stack Tracing
+
+You may have noticed that each logger almost looks like a error stack trace. This is intentional and the default behaviour, although it can be overridden. This is to give the developer more information about the program and where each output log is coming from, allowing them to trace through the program with ease.
+
+![stack_tracing](https://user-images.githubusercontent.com/31779571/46980917-1cba8580-d0a4-11e8-97e7-8b68457279e0.png)
+
+## Formatting
+
+You also may have noticed that every logger lines up, right aligned. This makes it easier to ready, and currently is the default and only behaviour, but if it is not suitable for your use case, please submit a feature request on github and I will make a way to configure it.
+
+## Options (colors and stack tracing)
+
+When a logger is created, you can also pass it a set of options that will change how the logger acts. Right now these can only be configures when the logger is created. Below is a list of current options and what they do.
+
+```
+const logger = require('easy-log')('app', { colorCode: 201, includeLineNumber: false });
+```
+
+<table>
+    <tr>
+        <td>colorCode</td><td>Integer (supported ones)</td><td>Specify a color for the logger</td><td>`{ colorCode: 201 }`</td><td>Calculated from namespace string</td>
+    </tr>
+    <tr>
+        <td>includeFunction</td><td>Boolean</td><td>Whether to list the function where the logger was called</td><td>`{ includeFunction: false }`</td><td>`true`</td>
+    </tr>
+    <tr>
+        <td>includeFile</td><td>Boolean</td><td>Whether to list the file where the logger was called</td><td>`{ includeFunction: false }`</td><td>`true`</td>
+    </tr>
+    <tr>
+        <td>includeLineNumber</td><td>Boolean</td><td>Whether to list the line where the logger was called</td><td>`{ includeFunction: false }`</td><td>`true`</td>
+    </tr>
+</table>
+
+**That's it! So far this is what I have. Beware, this is not yet tested on windows, linux, or browsers, and I may need to tweak things to make those all work. Once I do, I will realease the first 'real' version (1.0.0). Until then, it _should_ be stable, at least on Mac and in Node.js. 
+
+If you have a feature suggestion PLEASE let me know so I can incorporate it as quickly as possible. You can do so on my github, by following the Collaborating Guidelines I have and using the `issue` template I created: [Ask for a new feature](https://github.com/djpeach/easy-log/blob/master/Contributing-Guide.md)
+
+# Color Codes
 
 Below is a table of supported color codes for you to choose from when configuring colors
 
