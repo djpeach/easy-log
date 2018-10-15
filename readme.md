@@ -147,24 +147,27 @@ You also may have noticed that every logger lines up, right aligned. This makes 
 
 When a logger is created, you can also pass it a set of options that will change how the logger acts. Right now these can only be configures when the logger is created. Below is a list of current options and what they do.
 
-```
+```js
 const logger = require('easy-log')('app', { colorCode: 201, includeLineNumber: false });
 ```
 
 <table>
     <tr>
-        <td>colorCode</td><td>Integer (supported ones)</td><td>Specify a color for the logger</td><td>`{ colorCode: 201 }`</td><td>Calculated from namespace string</td>
+        <td>colorCode</td><td>Integer (supported ones)</td><td>Specify a color for the logger</td><td>{ colorCode: 201 }</td><td>Calculated from namespace string</td>
     </tr>
     <tr>
-        <td>includeFunction</td><td>Boolean</td><td>Whether to list the function where the logger was called</td><td>`{ includeFunction: false }`</td><td>`true`</td>
+        <td>includeFunction</td><td>Boolean</td><td>Whether to list the function where the logger was called</td><td>{ includeFunction: false }</td><td>true</td>
     </tr>
     <tr>
-        <td>includeFile</td><td>Boolean</td><td>Whether to list the file where the logger was called</td><td>`{ includeFunction: false }`</td><td>`true`</td>
+        <td>includeFile</td><td>Boolean</td><td>Whether to list the file where the logger was called</td><td>{ includeFunction: false }</td><td>`true`</td>
     </tr>
     <tr>
-        <td>includeLineNumber</td><td>Boolean</td><td>Whether to list the line where the logger was called</td><td>`{ includeFunction: false }`</td><td>`true`</td>
+        <td>includeLineNumber</td><td>Boolean</td><td>Whether to list the line where the logger was called</td><td>{ includeFunction: false }</td><td>true</td>
     </tr>
 </table>
+
+
+***
 
 **That's it! So far this is what I have. Beware, this is not yet tested on windows, linux, or browsers, and I may need to tweak things to make those all work. Once I do, I will realease the first 'real' version (1.0.0). Until then, it _should_ be stable, at least on Mac and in Node.js. 
 
