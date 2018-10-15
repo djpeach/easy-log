@@ -75,46 +75,101 @@ Below is a table of supported color codes for you to choose from when configurin
 
 <table>
     <tr>
-        <td>1</td><td><img src="http://medyk.org/colors/800000.png" width="20" height="20" /></td>
-        <td>4</td><td><img src="http://medyk.org/colors/000080.png" width="20" height="20" /></td>
-        <td>6</td><td><img src="http://medyk.org/colors/008080.png" width="20" height="20" /></td>
-        <td>9</td><td><img src="http://medyk.org/colors/ff0000.png" width="20" height="20" /></td>
-        <td>10</td><td><img src="http://medyk.org/colors/00ff00.png" width="20" height="20" /></td>
+        <td>20</td><td style="backgroundColor: red";></td>
+        <td>21</td><td style="backgroundColor: yellow";></td>
+        <td>26</td><td style="backgroundColor: green";></td>
+        <td>27</td><td style="backgroundColor: ";></td>
+        <td>32</td><td style="backgroundColor: ";></td>
+        <td>33</td><td style="backgroundColor: ";></td>
+        <td>38</td><td style="backgroundColor: ";></td>
     </tr>
     <tr>
-        <td>11</td><td><img src="http://medyk.org/colors/ffff00.png" width="20" height="20" /></td>
-        <td>46</td><td><img src="http://medyk.org/colors/00ff00.png" width="20" height="20" /></td>
-        <td>51</td><td><img src="http://medyk.org/colors/00ffff.png" width="20" height="20" /></td>
-        <td>75</td><td><img src="http://medyk.org/colors/5fafff.png" width="20" height="20" /></td>
-        <td>81</td><td><img src="http://medyk.org/colors/5fd7ff.png" width="20" height="20" /></td>
+        <td>39</td><td style="backgroundColor: ";></td>
+        <td>40</td><td style="backgroundColor: ";></td>
+        <td>41</td><td style="backgroundColor: ";></td>
+        <td>42</td><td style="backgroundColor: ";></td>
+        <td>43</td><td style="backgroundColor: ";></td>
+        <td>44</td><td style="backgroundColor: ";></td>
+        <td>45</td><td style="backgroundColor: ";></td>
     </tr>
     <tr>
-        <td>123</td><td><img src="http://medyk.org/colors/87ffff.png" width="20" height="20" /></td>
-        <td>154</td><td><img src="http://medyk.org/colors/afff00.png" width="20" height="20" /></td>
-        <td>166</td><td><img src="http://medyk.org/colors/d75f00.png" width="20" height="20" /></td>
-        <td>189</td><td><img src="http://medyk.org/colors/d7d7ff.png" width="20" height="20" /></td>
-        <td>190</td><td><img src="http://medyk.org/colors/d7ff00.png" width="20" height="20" /></td>
+        <td>56</td><td style="backgroundColor: ";></td>
+        <td>57</td><td style="backgroundColor: ";></td>
+        <td>62</td><td style="backgroundColor: ";></td>
+        <td>63</td><td style="backgroundColor: ";></td>
+        <td>68</td><td style="backgroundColor: ";></td>
+        <td>69</td><td style="backgroundColor: ";></td>
+        <td>74</td><td style="backgroundColor: ";></td>
     </tr>
     <tr>
-        <td>194</td><td><img src="http://medyk.org/colors/d7ffd7.png" width="20" height="20" /></td>
-        <td>195</td><td><img src="http://medyk.org/colors/d7ffff.png" width="20" height="20" /></td>
-        <td>196</td><td><img src="http://medyk.org/colors/ff0000.png" width="20" height="20" /></td>
-        <td>197</td><td><img src="http://medyk.org/colors/ff005f.png" width="20" height="20" /></td>
-        <td>198</td><td><img src="http://medyk.org/colors/ff0087.png" width="20" height="20" /></td>
+        <td>75</td><td style="backgroundColor: ";></td>
+        <td>76</td><td style="backgroundColor: ";></td>
+        <td>77</td><td style="backgroundColor: ";></td>
+        <td>78</td><td style="backgroundColor: ";></td>
+        <td>79</td><td style="backgroundColor: ";></td>
+        <td>80</td><td style="backgroundColor: ";></td>
+        <td>81</td><td style="backgroundColor: ";></td>
     </tr>
     <tr>
-        <td>199</td><td><img src="http://medyk.org/colors/ff00af.png" width="20" height="20" /></td>
-        <td>202</td><td><img src="http://medyk.org/colors/ff5f00.png" width="20" height="20" /></td>
-        <td>204</td><td><img src="http://medyk.org/colors/ff5f87.png" width="20" height="20" /></td>
-        <td>207</td><td><img src="http://medyk.org/colors/ff5fff.png" width="20" height="20" /></td>
-        <td>208</td><td><img src="http://medyk.org/colors/ff8700.png" width="20" height="20" /></td>
+        <td>92</td><td style="backgroundColor: ";></td>
+        <td>93</td><td style="backgroundColor: ";></td>
+        <td>98</td><td style="backgroundColor: ";></td>
+        <td>99</td><td style="backgroundColor: ";></td>
+        <td>112</td><td style="backgroundColor: ";></td>
+        <td>113</td><td style="backgroundColor: ";></td>
+        <td>128</td><td style="backgroundColor: ";></td>
     </tr>
     <tr>
-        <td>213</td><td><img src="http://medyk.org/colors/ff87ff.png" width="20" height="20" /></td>
-        <td>214</td><td><img src="http://medyk.org/colors/ffaf00.png" width="20" height="20" /></td>
-        <td>220</td><td><img src="http://medyk.org/colors/ffd700.png" width="20" height="20" /></td>
-        <td>225</td><td><img src="http://medyk.org/colors/ffd7ff.png" width="20" height="20" /></td>
-        <td>226</td><td><img src="http://medyk.org/colors/ffff00.png" width="20" height="20" /></td>
+        <td>129</td><td style="backgroundColor: ";></td>
+        <td>134</td><td style="backgroundColor: ";></td>
+        <td>135</td><td style="backgroundColor: ";></td>
+        <td>148</td><td style="backgroundColor: ";></td>
+        <td>149</td><td style="backgroundColor: ";></td>
+        <td>160</td><td style="backgroundColor: ";></td>
+        <td>161</td><td style="backgroundColor: ";></td>
     </tr>
-  
+    <tr>
+        <td>162</td><td style="backgroundColor: ";></td>
+        <td>163</td><td style="backgroundColor: ";></td>
+        <td>164</td><td style="backgroundColor: ";></td>
+        <td>165</td><td style="backgroundColor: ";></td>
+        <td>166</td><td style="backgroundColor: ";></td>
+        <td>167</td><td style="backgroundColor: ";></td>
+        <td>168</td><td style="backgroundColor: ";></td>
+    </tr>
+    <tr>
+        <td>169</td><td style="backgroundColor: ";></td>
+        <td>170</td><td style="backgroundColor: ";></td>
+        <td>171</td><td style="backgroundColor: ";></td>
+        <td>172</td><td style="backgroundColor: ";></td>
+        <td>173</td><td style="backgroundColor: ";></td>
+        <td>178</td><td style="backgroundColor: ";></td>
+        <td>179</td><td style="backgroundColor: ";></td>
+    </tr>
+    <tr>
+        <td>184</td><td style="backgroundColor: ";></td>
+        <td>226</td><td style="backgroundColor: ";></td>
+        <td>185</td><td style="backgroundColor: ";></td>
+        <td>196</td><td style="backgroundColor: ";></td>
+        <td>197</td><td style="backgroundColor: ";></td>
+        <td>198</td><td style="backgroundColor: ";></td>
+        <td>199</td><td style="backgroundColor: ";></td>
+    </tr>
+    <tr>
+        <td>200</td><td style="backgroundColor: ";></td>
+        <td>201</td><td style="backgroundColor: ";></td>
+        <td>202</td><td style="backgroundColor: ";></td>
+        <td>203</td><td style="backgroundColor: ";></td>
+        <td>204</td><td style="backgroundColor: ";></td>
+        <td>205</td><td style="backgroundColor: ";></td>
+        <td>206</td><td style="backgroundColor: ";></td>
+    </tr>
+    <tr>
+        <td>207</td><td style="backgroundColor: ";></td>
+        <td>208</td><td style="backgroundColor: ";></td>
+        <td>209</td><td style="backgroundColor: ";></td>
+        <td>214</td><td style="backgroundColor: ";></td>
+        <td>215</td><td style="backgroundColor: ";></td>
+        <td>220</td><td style="backgroundColor: ";></td>
+        <td>221</td><td style="backgroundColor: ";></td>
 </table>
