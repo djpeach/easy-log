@@ -19,7 +19,7 @@ Using `const logger = require('easy-log')('app')` exposes a function that will n
 A basic use case with a few different name-spaced loggers, and a couple different files
 
 app.js
-```
+```js
 const express = require('express')
     , basicLog = require('../../')('app:basic')
     , dbLog = require('../../')('app:db')
@@ -43,7 +43,7 @@ require('./worker');
 ```
 
 worker.js
-```
+```js
 const dbLogger = require('../../')('app:db')
     , basicLogger = require('../../')('app:basic');
 
@@ -67,4 +67,4 @@ run `DEBUG=app:* node app.js`
 **Result**
 ***
 
-![basic_use_case](https://user-images.githubusercontent.com/31779571/46962510-5756fa80-d071-11e8-8756-6c67f0aebb8d.png)
+![basic_use_case](https://user-images.githubusercontent.com/31779571/46962930-5f636a00-d072-11e8-8387-f3ab7281cfe2.png)
