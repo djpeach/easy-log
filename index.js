@@ -5,12 +5,12 @@ let allNamespaces = [];
 let enabledNamespaces = process.env.DEBUG ? process.env.DEBUG.split(/[\s,]+/) : [];
 let longestNamespaceLength = 0;
 
-function createLogger(namespace, { colorCode, includeFunction, includeFile, includeLineNumber } = {}) {
+function createLogger(namespace = '', { colorCode, includeFunction, includeFile, includeLineNumber } = {}) {
     logger.colorCode = colorCode ? colorCodes[colorCodes.indexOf(colorCode)] : colorCodes[pickColor(namespace)];
     logger.includeFunction = includeFunction ? includeFunction : true;
     logger.includeFile = includeFile ? includeFile : true;
     logger.includeLineNumber = includeLineNumber ? includeLineNumber : true;
-    logger.namespace = namespace ? namespace : '';
+    logger.namespace = namespace;
 
     allNamespaces.push(logger.namespace);
 
@@ -19,7 +19,7 @@ function createLogger(namespace, { colorCode, includeFunction, includeFile, incl
     }
 
     function logger(data) {
-        if (namespaceEnabled(namespace)) {
+        if (namespace === '' || namespaceEnabled(namespace)) {
             const color = colorizer.xterm(logger.colorCode)
                 , fileName = logger.includeFile ? theFileName() : ''
                 , functionName = logger.includeFunction ? theFunctionName() : ''
@@ -32,12 +32,20 @@ function createLogger(namespace, { colorCode, includeFunction, includeFile, incl
     }
 
     logger.enable = function () {
+        if (this.namespace === '') {
+            console.log(colorizer.bgYellowBright.black("You cannot turn off the default logger with the '' namespace"));
+            return
+        }
         if (!enabledNamespaces.includes(this.namespace)) {
             enabledNamespaces.push(this.namespace);
         }
     }
 
     logger.disable = function () {
+        if (this.namespace === '') {
+            console.log(colorizer.bgXterm(226).xterm(20)("You cannot turn off the default logger with the '' namespace"));
+            return
+        }
         enabledNamespaces.splice(enabledNamespaces.indexOf(this.namespace), 1);
     }
 

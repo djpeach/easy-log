@@ -79,7 +79,7 @@ basicWork();
 When you create a logger, simple pass it a namespace as well, and it will only output when that namespace is specified either in code or in the run script.
 
 ```js
-const logger = require('easy-log'); // Will default to '' and will always work
+const logger = require('easy-log')(); // Will default to '' and will always work
 const logger2 = require('easy-log')('debugging') // Now will only output when the 'debugging' namespace is enabled
 ```
 
