@@ -1,5 +1,5 @@
 const dbLogger = require('../../')('app:db')
-    , basicLogger = require('../../')('app:basic');
+    , basicLogger = require('../../')('app');
 
 function dbWork() {
     dbLogger('doing lots of uninteresting database work');
