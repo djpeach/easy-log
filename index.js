@@ -5,9 +5,8 @@ let allNamespaces = [];
 let enabledNamespaces = process.env.DEBUG ? process.env.DEBUG.split(/[\s,]+/) : [];
 let longestNamespaceLength = 0;
 
-function createLogger(namespace, { formattted, colorCode, includeFunction, includeFile, includeLineNumber } = {}) {
+function createLogger(namespace, { colorCode, includeFunction, includeFile, includeLineNumber } = {}) {
     logger.colorCode = colorCode ? colorCodes[colorCodes.indexOf(colorCode)] : colorCodes[pickColor(namespace)];
-    logger.formattted = formattted;
     logger.includeFunction = includeFunction ? includeFunction : true;
     logger.includeFile = includeFile ? includeFile : true;
     logger.includeLineNumber = includeLineNumber ? includeLineNumber : true;

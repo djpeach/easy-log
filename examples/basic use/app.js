@@ -9,8 +9,8 @@ const name = "Example Application";
 basicLogger(`Booting ${name}`);
 
 mongoose.connect("mongodb://localhost/example", { useNewUrlParser: true })
-    .then(() => { dbLogger(`app.js -> Mongod DB connected successfully`); })
-    .catch((err) => { dbLogger(`app.js -> Mongo DB could not connect: ${err}`); });
+    .then(() => { dbLogger(`Mongod DB connected successfully`); })
+    .catch((err) => { dbLogger(`Mongo DB could not connect: ${err}`); });
 
 const port = process.env.PORT || 3000;
 
