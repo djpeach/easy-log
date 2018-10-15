@@ -75,101 +75,101 @@ Below is a table of supported color codes for you to choose from when configurin
 
 <table>
     <tr>
-        <td>20</td><td style="backgroundColor: red";></td>
-        <td>21</td><td style="backgroundColor: yellow";></td>
-        <td>26</td><td style="backgroundColor: green";></td>
-        <td>27</td><td style="backgroundColor: ";></td>
-        <td>32</td><td style="backgroundColor: ";></td>
-        <td>33</td><td style="backgroundColor: ";></td>
-        <td>38</td><td style="backgroundColor: ";></td>
+        <td>20</td><td></td>
+        <td>21</td><td></td>
+        <td>26</td><td></td>
+        <td>27</td><td></td>
+        <td>32</td><td></td>
+        <td>33</td><td></td>
+        <td>38</td><td></td>
     </tr>
     <tr>
-        <td>39</td><td style="backgroundColor: ";></td>
-        <td>40</td><td style="backgroundColor: ";></td>
-        <td>41</td><td style="backgroundColor: ";></td>
-        <td>42</td><td style="backgroundColor: ";></td>
-        <td>43</td><td style="backgroundColor: ";></td>
-        <td>44</td><td style="backgroundColor: ";></td>
-        <td>45</td><td style="backgroundColor: ";></td>
+        <td>39</td><td></td>
+        <td>40</td><td></td>
+        <td>41</td><td></td>
+        <td>42</td><td></td>
+        <td>43</td><td></td>
+        <td>44</td><td></td>
+        <td>45</td><td></td>
     </tr>
     <tr>
-        <td>56</td><td style="backgroundColor: ";></td>
-        <td>57</td><td style="backgroundColor: ";></td>
-        <td>62</td><td style="backgroundColor: ";></td>
-        <td>63</td><td style="backgroundColor: ";></td>
-        <td>68</td><td style="backgroundColor: ";></td>
-        <td>69</td><td style="backgroundColor: ";></td>
-        <td>74</td><td style="backgroundColor: ";></td>
+        <td>56</td><td></td>
+        <td>57</td><td></td>
+        <td>62</td><td></td>
+        <td>63</td><td></td>
+        <td>68</td><td></td>
+        <td>69</td><td></td>
+        <td>74</td><td></td>
     </tr>
     <tr>
-        <td>75</td><td style="backgroundColor: ";></td>
-        <td>76</td><td style="backgroundColor: ";></td>
-        <td>77</td><td style="backgroundColor: ";></td>
-        <td>78</td><td style="backgroundColor: ";></td>
-        <td>79</td><td style="backgroundColor: ";></td>
-        <td>80</td><td style="backgroundColor: ";></td>
-        <td>81</td><td style="backgroundColor: ";></td>
+        <td>75</td><td></td>
+        <td>76</td><td></td>
+        <td>77</td><td></td>
+        <td>78</td><td></td>
+        <td>79</td><td></td>
+        <td>80</td><td></td>
+        <td>81</td><td></td>
     </tr>
     <tr>
-        <td>92</td><td style="backgroundColor: ";></td>
-        <td>93</td><td style="backgroundColor: ";></td>
-        <td>98</td><td style="backgroundColor: ";></td>
-        <td>99</td><td style="backgroundColor: ";></td>
-        <td>112</td><td style="backgroundColor: ";></td>
-        <td>113</td><td style="backgroundColor: ";></td>
-        <td>128</td><td style="backgroundColor: ";></td>
+        <td>92</td><td></td>
+        <td>93</td><td></td>
+        <td>98</td><td></td>
+        <td>99</td><td></td>
+        <td>112</td><td></td>
+        <td>113</td><td></td>
+        <td>128</td><td></td>
     </tr>
     <tr>
-        <td>129</td><td style="backgroundColor: ";></td>
-        <td>134</td><td style="backgroundColor: ";></td>
-        <td>135</td><td style="backgroundColor: ";></td>
-        <td>148</td><td style="backgroundColor: ";></td>
-        <td>149</td><td style="backgroundColor: ";></td>
-        <td>160</td><td style="backgroundColor: ";></td>
-        <td>161</td><td style="backgroundColor: ";></td>
+        <td>129</td><td></td>
+        <td>134</td><td></td>
+        <td>135</td><td></td>
+        <td>148</td><td></td>
+        <td>149</td><td></td>
+        <td>160</td><td></td>
+        <td>161</td><td></td>
     </tr>
     <tr>
-        <td>162</td><td style="backgroundColor: ";></td>
-        <td>163</td><td style="backgroundColor: ";></td>
-        <td>164</td><td style="backgroundColor: ";></td>
-        <td>165</td><td style="backgroundColor: ";></td>
-        <td>166</td><td style="backgroundColor: ";></td>
-        <td>167</td><td style="backgroundColor: ";></td>
-        <td>168</td><td style="backgroundColor: ";></td>
+        <td>162</td><td></td>
+        <td>163</td><td></td>
+        <td>164</td><td></td>
+        <td>165</td><td></td>
+        <td>166</td><td></td>
+        <td>167</td><td></td>
+        <td>168</td><td></td>
     </tr>
     <tr>
-        <td>169</td><td style="backgroundColor: ";></td>
-        <td>170</td><td style="backgroundColor: ";></td>
-        <td>171</td><td style="backgroundColor: ";></td>
-        <td>172</td><td style="backgroundColor: ";></td>
-        <td>173</td><td style="backgroundColor: ";></td>
-        <td>178</td><td style="backgroundColor: ";></td>
-        <td>179</td><td style="backgroundColor: ";></td>
+        <td>169</td><td></td>
+        <td>170</td><td></td>
+        <td>171</td><td></td>
+        <td>172</td><td></td>
+        <td>173</td><td></td>
+        <td>178</td><td></td>
+        <td>179</td><td></td>
     </tr>
     <tr>
-        <td>184</td><td style="backgroundColor: ";></td>
-        <td>226</td><td style="backgroundColor: ";></td>
-        <td>185</td><td style="backgroundColor: ";></td>
-        <td>196</td><td style="backgroundColor: ";></td>
-        <td>197</td><td style="backgroundColor: ";></td>
-        <td>198</td><td style="backgroundColor: ";></td>
-        <td>199</td><td style="backgroundColor: ";></td>
+        <td>184</td><td></td>
+        <td>226</td><td></td>
+        <td>185</td><td></td>
+        <td>196</td><td></td>
+        <td>197</td><td></td>
+        <td>198</td><td></td>
+        <td>199</td><td></td>
     </tr>
     <tr>
-        <td>200</td><td style="backgroundColor: ";></td>
-        <td>201</td><td style="backgroundColor: ";></td>
-        <td>202</td><td style="backgroundColor: ";></td>
-        <td>203</td><td style="backgroundColor: ";></td>
-        <td>204</td><td style="backgroundColor: ";></td>
-        <td>205</td><td style="backgroundColor: ";></td>
-        <td>206</td><td style="backgroundColor: ";></td>
+        <td>200</td><td></td>
+        <td>201</td><td></td>
+        <td>202</td><td></td>
+        <td>203</td><td></td>
+        <td>204</td><td></td>
+        <td>205</td><td></td>
+        <td>206</td><td></td>
     </tr>
     <tr>
-        <td>207</td><td style="backgroundColor: ";></td>
-        <td>208</td><td style="backgroundColor: ";></td>
-        <td>209</td><td style="backgroundColor: ";></td>
-        <td>214</td><td style="backgroundColor: ";></td>
-        <td>215</td><td style="backgroundColor: ";></td>
-        <td>220</td><td style="backgroundColor: ";></td>
-        <td>221</td><td style="backgroundColor: ";></td>
+        <td>207</td><td></td>
+        <td>208</td><td></td>
+        <td>209</td><td></td>
+        <td>214</td><td></td>
+        <td>215</td><td></td>
+        <td>220</td><td></td>
+        <td>221</td><td></td>
 </table>
