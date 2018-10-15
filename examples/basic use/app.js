@@ -1,7 +1,6 @@
 const express = require('express')
-    , basicLogger = require('../../')('app')
-    , dbLogger = require('../../')('app:db:')
-    , dbSuccessLogger = require('../../')('app:db:success')
+    , basicLogger = require('../../')('app:basic', { colorCode: 199 })
+    , dbLogger = require('../../')('app:db:', { colorCode: 226 })
     , mongoose = require('mongoose');
 
 const app = express();
@@ -10,7 +9,7 @@ const name = "Example Application";
 basicLogger(`Booting ${name}`);
 
 mongoose.connect("mongodb://localhost/example", { useNewUrlParser: true })
-    .then(() => { dbSuccessLogger(`app.js -> Mongod DB connected successfully`); })
+    .then(() => { dbLogger(`app.js -> Mongod DB connected successfully`); })
     .catch((err) => { dbLogger(`app.js -> Mongo DB could not connect: ${err}`); });
 
 const port = process.env.PORT || 3000;

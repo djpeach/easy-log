@@ -1,5 +1,7 @@
 # easy-log
 
+![basic_example](https://user-images.githubusercontent.com/31779571/46979349-5b017600-d09f-11e8-86e5-aa00acbf9544.png)
+
 A debugging module that grew out of a dissatisfaction of all other current modules for logging and debugging. Features all other dubugging features I could find, and some additional configurations, stack tracing, and options.
 
 *Notice that this package is still not officially released, and is under heavy development. All releases should be stable, but are currently only tested on a Mac, use at your own risk, currently*
@@ -67,7 +69,7 @@ run `DEBUG=app:* node app.js`
 **Result**
 ***
 
-![basic_use_case](https://user-images.githubusercontent.com/31779571/46962930-5f636a00-d072-11e8-8387-f3ab7281cfe2.png)
+![basic_example](https://user-images.githubusercontent.com/31779571/46979349-5b017600-d09f-11e8-86e5-aa00acbf9544.png)
 
 ## Color Codes
 

@@ -1,5 +1,5 @@
-const dbLogger = require('../../')('app:db')
-    , basicLogger = require('../../')('app');
+const dbLogger = require('../../')('app:db', { colorCode: 40 })
+    , basicLogger = require('../../')('app:basic', { colorCode: 45 });
 
 function dbWork() {
     dbLogger('doing lots of uninteresting database work');
@@ -9,7 +9,7 @@ function dbWork() {
 dbWork();
 
 function basicWork() {
-    basicLogger('doing some basic work');
+    basicLogger('doing some basic work:b');
     setTimeout(basicWork, Math.random() * 2000);
 }
 
