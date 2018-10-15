@@ -80,6 +80,8 @@ Below is a table of supported color codes for you to choose from when configurin
         <td>6</td><td><img src="http://medyk.org/colors/008080.png" width="20" height="20" /></td>
         <td>9</td><td><img src="http://medyk.org/colors/ff0000.png" width="20" height="20" /></td>
         <td>10</td><td><img src="http://medyk.org/colors/00ff00.png" width="20" height="20" /></td>
+    </tr>
+    <tr>
         <td>11</td><td><img src="http://medyk.org/colors/ffff00.png" width="20" height="20" /></td>
         <td>46</td><td><img src="http://medyk.org/colors/00ff00.png" width="20" height="20" /></td>
         <td>51</td><td><img src="http://medyk.org/colors/00ffff.png" width="20" height="20" /></td>
@@ -92,6 +94,8 @@ Below is a table of supported color codes for you to choose from when configurin
         <td>166</td><td><img src="http://medyk.org/colors/d75f00.png" width="20" height="20" /></td>
         <td>189</td><td><img src="http://medyk.org/colors/d7d7ff.png" width="20" height="20" /></td>
         <td>190</td><td><img src="http://medyk.org/colors/d7ff00.png" width="20" height="20" /></td>
+    </tr>
+    <tr>
         <td>194</td><td><img src="http://medyk.org/colors/d7ffd7.png" width="20" height="20" /></td>
         <td>195</td><td><img src="http://medyk.org/colors/d7ffff.png" width="20" height="20" /></td>
         <td>196</td><td><img src="http://medyk.org/colors/ff0000.png" width="20" height="20" /></td>
@@ -104,6 +108,8 @@ Below is a table of supported color codes for you to choose from when configurin
         <td>204</td><td><img src="http://medyk.org/colors/ff5f87.png" width="20" height="20" /></td>
         <td>207</td><td><img src="http://medyk.org/colors/ff5fff.png" width="20" height="20" /></td>
         <td>208</td><td><img src="http://medyk.org/colors/ff8700.png" width="20" height="20" /></td>
+    </tr>
+    <tr>
         <td>213</td><td><img src="http://medyk.org/colors/ff87ff.png" width="20" height="20" /></td>
         <td>214</td><td><img src="http://medyk.org/colors/ffaf00.png" width="20" height="20" /></td>
         <td>220</td><td><img src="http://medyk.org/colors/ffd700.png" width="20" height="20" /></td>
