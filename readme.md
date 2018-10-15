@@ -75,101 +75,101 @@ Below is a table of supported color codes for you to choose from when configurin
 
 <table>
     <tr>
-        <td>20</td><td></td>
-        <td>21</td><td></td>
-        <td>26</td><td></td>
-        <td>27</td><td></td>
-        <td>32</td><td></td>
-        <td>33</td><td></td>
-        <td>38</td><td></td>
+        <td>20</td><td><img src="___" width="30" height="30" /></td>
+        <td>21</td><td><img src="___" width="30" height="30" /></td>
+        <td>26</td><td><img src="___" width="30" height="30" /></td>
+        <td>27</td><td><img src="___" width="30" height="30" /></td>
+        <td>32</td><td><img src="___" width="30" height="30" /></td>
+        <td>33</td><td><img src="___" width="30" height="30" /></td>
+        <td>38</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>39</td><td></td>
-        <td>40</td><td></td>
-        <td>41</td><td></td>
-        <td>42</td><td></td>
-        <td>43</td><td></td>
-        <td>44</td><td></td>
-        <td>45</td><td></td>
+        <td>39</td><td><img src="___" width="30" height="30" /></td>
+        <td>40</td><td><img src="___" width="30" height="30" /></td>
+        <td>41</td><td><img src="___" width="30" height="30" /></td>
+        <td>42</td><td><img src="___" width="30" height="30" /></td>
+        <td>43</td><td><img src="___" width="30" height="30" /></td>
+        <td>44</td><td><img src="___" width="30" height="30" /></td>
+        <td>45</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>56</td><td></td>
-        <td>57</td><td></td>
-        <td>62</td><td></td>
-        <td>63</td><td></td>
-        <td>68</td><td></td>
-        <td>69</td><td></td>
-        <td>74</td><td></td>
+        <td>56</td><td><img src="___" width="30" height="30" /></td>
+        <td>57</td><td><img src="___" width="30" height="30" /></td>
+        <td>62</td><td><img src="___" width="30" height="30" /></td>
+        <td>63</td><td><img src="___" width="30" height="30" /></td>
+        <td>68</td><td><img src="___" width="30" height="30" /></td>
+        <td>69</td><td><img src="___" width="30" height="30" /></td>
+        <td>74</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>75</td><td></td>
-        <td>76</td><td></td>
-        <td>77</td><td></td>
-        <td>78</td><td></td>
-        <td>79</td><td></td>
-        <td>80</td><td></td>
-        <td>81</td><td></td>
+        <td>75</td><td><img src="___" width="30" height="30" /></td>
+        <td>76</td><td><img src="___" width="30" height="30" /></td>
+        <td>77</td><td><img src="___" width="30" height="30" /></td>
+        <td>78</td><td><img src="___" width="30" height="30" /></td>
+        <td>79</td><td><img src="___" width="30" height="30" /></td>
+        <td>80</td><td><img src="___" width="30" height="30" /></td>
+        <td>81</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>92</td><td></td>
-        <td>93</td><td></td>
-        <td>98</td><td></td>
-        <td>99</td><td></td>
-        <td>112</td><td></td>
-        <td>113</td><td></td>
-        <td>128</td><td></td>
+        <td>92</td><td><img src="___" width="30" height="30" /></td>
+        <td>93</td><td><img src="___" width="30" height="30" /></td>
+        <td>98</td><td><img src="___" width="30" height="30" /></td>
+        <td>99</td><td><img src="___" width="30" height="30" /></td>
+        <td>112</td><td><img src="___" width="30" height="30" /></td>
+        <td>113</td><td><img src="___" width="30" height="30" /></td>
+        <td>128</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>129</td><td></td>
-        <td>134</td><td></td>
-        <td>135</td><td></td>
-        <td>148</td><td></td>
-        <td>149</td><td></td>
-        <td>160</td><td></td>
-        <td>161</td><td></td>
+        <td>129</td><td><img src="___" width="30" height="30" /></td>
+        <td>134</td><td><img src="___" width="30" height="30" /></td>
+        <td>135</td><td><img src="___" width="30" height="30" /></td>
+        <td>148</td><td><img src="___" width="30" height="30" /></td>
+        <td>149</td><td><img src="___" width="30" height="30" /></td>
+        <td>160</td><td><img src="___" width="30" height="30" /></td>
+        <td>161</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>162</td><td></td>
-        <td>163</td><td></td>
-        <td>164</td><td></td>
-        <td>165</td><td></td>
-        <td>166</td><td></td>
-        <td>167</td><td></td>
-        <td>168</td><td></td>
+        <td>162</td><td><img src="___" width="30" height="30" /></td>
+        <td>163</td><td><img src="___" width="30" height="30" /></td>
+        <td>164</td><td><img src="___" width="30" height="30" /></td>
+        <td>165</td><td><img src="___" width="30" height="30" /></td>
+        <td>166</td><td><img src="___" width="30" height="30" /></td>
+        <td>167</td><td><img src="___" width="30" height="30" /></td>
+        <td>168</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>169</td><td></td>
-        <td>170</td><td></td>
-        <td>171</td><td></td>
-        <td>172</td><td></td>
-        <td>173</td><td></td>
-        <td>178</td><td></td>
-        <td>179</td><td></td>
+        <td>169</td><td><img src="___" width="30" height="30" /></td>
+        <td>170</td><td><img src="___" width="30" height="30" /></td>
+        <td>171</td><td><img src="___" width="30" height="30" /></td>
+        <td>172</td><td><img src="___" width="30" height="30" /></td>
+        <td>173</td><td><img src="___" width="30" height="30" /></td>
+        <td>178</td><td><img src="___" width="30" height="30" /></td>
+        <td>179</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>184</td><td></td>
-        <td>226</td><td></td>
-        <td>185</td><td></td>
-        <td>196</td><td></td>
-        <td>197</td><td></td>
-        <td>198</td><td></td>
-        <td>199</td><td></td>
+        <td>184</td><td><img src="___" width="30" height="30" /></td>
+        <td>226</td><td><img src="___" width="30" height="30" /></td>
+        <td>185</td><td><img src="___" width="30" height="30" /></td>
+        <td>196</td><td><img src="___" width="30" height="30" /></td>
+        <td>197</td><td><img src="___" width="30" height="30" /></td>
+        <td>198</td><td><img src="___" width="30" height="30" /></td>
+        <td>199</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>200</td><td></td>
-        <td>201</td><td></td>
-        <td>202</td><td></td>
-        <td>203</td><td></td>
-        <td>204</td><td></td>
-        <td>205</td><td></td>
-        <td>206</td><td></td>
+        <td>200</td><td><img src="___" width="30" height="30" /></td>
+        <td>201</td><td><img src="___" width="30" height="30" /></td>
+        <td>202</td><td><img src="___" width="30" height="30" /></td>
+        <td>203</td><td><img src="___" width="30" height="30" /></td>
+        <td>204</td><td><img src="___" width="30" height="30" /></td>
+        <td>205</td><td><img src="___" width="30" height="30" /></td>
+        <td>206</td><td><img src="___" width="30" height="30" /></td>
     </tr>
     <tr>
-        <td>207</td><td></td>
-        <td>208</td><td></td>
-        <td>209</td><td></td>
-        <td>214</td><td></td>
-        <td>215</td><td></td>
-        <td>220</td><td></td>
-        <td>221</td><td></td>
+        <td>207</td><td><img src="___" width="30" height="30" /></td>
+        <td>208</td><td><img src="___" width="30" height="30" /></td>
+        <td>209</td><td><img src="___" width="30" height="30" /></td>
+        <td>214</td><td><img src="___" width="30" height="30" /></td>
+        <td>215</td><td><img src="___" width="30" height="30" /></td>
+        <td>220</td><td><img src="___" width="30" height="30" /></td>
+        <td>221</td><td><img src="___" width="30" height="30" /></td>
 </table>
