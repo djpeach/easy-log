@@ -1,19 +1,20 @@
-const dbLogger = require('../../')('db', { colorCode: 163 });
-const routeLogger = require('../../')('route', { colorCode: 77 });
+const express = require('express')
+    , basicLogger = require('../../')('app:basic')
+    , dbLogger = require('../../')('app:db:test')
+    , mongoose = require('mongoose');
 
-dbLogger.enable();
-routeLogger.enable();
+const app = express();
+const name = "Example Application";
 
-dbLogger('testing the db Logger');
-routeLogger('testing the route Logger');
-dbLogger('This one will not work');
-dbLogger.enable()
-dbLogger('Now it will work');
+basicLogger(`Booting ${name}`);
 
-// The same applies for routeLogger()
+mongoose.connect("mongodb://localhost/example", { useNewUrlParser: true })
+    .then(() => { dbLogger(`app.js -> Mongod DB connected successfully`); })
+    .catch((err) => { dbLogger(`app.js -> Mongo DB could not connect: ${err}`); });
 
-function myFunc() {
-    dbLogger('This is inside a function');
-}
+const port = process.env.PORT || 3000;
 
-myFunc();
+app.listen(port, () => { basicLogger(`App listening on port ${port}`); });
+
+// Use some imaginary worker file
+require('./worker');
