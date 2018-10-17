@@ -18,7 +18,7 @@ function createLogger(namespace = '', { colorCode, includeFunction, includeFile,
         longestNamespaceLength = logger.namespace.length;
     }
 
-    function logger(data) {
+    function logger(data = '') {
         if (namespace === '' || namespaceEnabled(namespace)) {
             const color = colorizer.xterm(logger.colorCode)
                 , fileName = logger.includeFile ? theFileName() : ''
@@ -26,7 +26,9 @@ function createLogger(namespace = '', { colorCode, includeFunction, includeFile,
                 , lineNumber = logger.includeLineNumber ? theLineNumber() : ''
                 , logTraceBar = logger.includeFile || logger.includeFunction || logger.includeLineNumber ? ' |' : ''
                 , logTrace = `${logTraceBar}${functionName}${fileName}${lineNumber}`
-                , totalPrefix = namespace.padStart(longestNamespaceLength) + logTrace + ' -> ';
+                , useArrow = data === '' ? '' : ' -> '
+                , totalPrefix = namespace.padStart
+                    (longestNamespaceLength) + logTrace + ' -> ';
             console.log(color(totalPrefix) + `${data}`);
         }
     }
