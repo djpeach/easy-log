@@ -9,7 +9,7 @@ function dbWork() {
 dbWork();
 
 function basicWork() {
-    basicLogger('doing some basic work:b');
+    basicLogger('doing some basic work');
     setTimeout(basicWork, Math.random() * 2000);
 }
 
