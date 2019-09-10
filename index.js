@@ -27,7 +27,7 @@ function createLogger(namespace = '', { colorCode, includeFunction, includeFile,
                 , logTraceBar = logger.includeFile || logger.includeFunction || logger.includeLineNumber ? ' |' : ''
                 , logTrace = `${logTraceBar}${functionName}${fileName}${lineNumber}`
                 , useArrow = data === '' ? '' : ' -> '
-                , totalPrefix = namespace.padStart(longestNamespaceLength, ' ') + logTrace + useArrow;
+                , totalPrefix = namespace.toString().padStart(longestNamespaceLength, ' ') + logTrace + useArrow;
             console.log(color(totalPrefix + `${data}`));
         }
     }
