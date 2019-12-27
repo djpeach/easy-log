@@ -7,9 +7,9 @@ let longestNamespaceLength = 0;
 
 function createLogger(namespace = '', { colorCode, includeFunction, includeFile, includeLineNumber } = {}) {
     logger.colorCode = colorCode ? colorCodes[colorCodes.indexOf(colorCode)] : colorCodes[pickColor(namespace)];
-    logger.includeFunction = includeFunction ? includeFunction : true;
-    logger.includeFile = includeFile ? includeFile : true;
-    logger.includeLineNumber = includeLineNumber ? includeLineNumber : true;
+    logger.includeFunction = includeFunction === undefined ? true : includeFunction;
+    logger.includeFile = includeFile === undefined ? true : includeFile;
+    logger.includeLineNumber = includeLineNumber === undefined ? true : includeLineNumber;
     logger.namespace = namespace;
 
     allNamespaces.push(logger.namespace);
