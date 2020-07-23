@@ -2,9 +2,9 @@
 
 ![basic_example](https://user-images.githubusercontent.com/31779571/46981232-77a0ac80-d0a5-11e8-99e5-3de868426683.png)
 
-A debugging module that grew out of a dissatisfaction of all other current modules for logging and debugging. Features all other dubugging features I could find, and some additional configurations, stack tracing, and options.
+A logging package that lets you color code your logging namespaces. Easily trace just your database or error logic, by following the corresponding colors. Additionally, each logger is individually configurable, and the output aligns for easy reading, even if color-coding is not an option. The goal is to make logs as easy to read as possible.
 
-*Notice that this package is still not officially released, and is under heavy development. All releases should be stable, but are currently only tested on a Mac, use at your own risk, currently*
+*Notice that this package is still not officially released, and is under development. All releases should be stable, but are currently only tested on a Mac, use at your own risk, currently*
 
 ## Installation
 
@@ -14,9 +14,9 @@ npm i easy-log
 
 ## Usage
 
-Using `const logger = require('easy-log')('app')` exposes a function that will name-space a logging function, which means the specified logger will only output when that name-space is specified, either in code or in the run script. Each logger is highly customizable, individually of each other. You can set, change, and toggle colors, formatting, stack tracing, and even the entire logger itself. Read on for specific syntax and example of how to do so.
+Using `const logger = require('easy-log')('app')` creates a logging function `logger` with the namespace "app", which means the specified logs will only output when that name-space is enabled. Enabling/disabling namespaces can be done dynamically at run time in the code, statically at the beginning in the namescript, or a mix of both. Each logger can be customized individually of each other. You can set, change, and toggle colors, formatting, stack tracing, and even the entire logger itself. Read on for specific syntax and examples of how to do so.
 
-## Base Example
+## Basic Example
 
 A basic use case with a few different name-spaced loggers, and a couple different files
 
@@ -76,7 +76,7 @@ basicWork();
 
 ## Name Spaces
 
-When you create a logger, simple pass it a namespace as well, and it will only output when that namespace is specified either in code or in the run script.
+When you create a logger, simply pass it a namespace as well, and it will only output when that namespace is enabled either in code or in the run script.
 
 ```js
 const logger = require('easy-log')(); // Will default to '' and will always work
@@ -135,7 +135,7 @@ DEBUG=app:*,-app:db // Will run every namespace that is a child of `app` EXCEPT 
 
 ## Stack Tracing
 
-You may have noticed that each logger almost looks like a error stack trace. This is intentional and the default behaviour, although it can be overridden. This is to give the developer more information about the program and where each output log is coming from, allowing them to trace through the program with ease.
+You may have noticed that each logger almost looks like a lite error stack trace, including the location in the code of the logger. This is intentional and the default behaviour, although it can be overridden. This is to give the developer more information about the program and where each output log is coming from, allowing them to trace through the program with ease.
 
 ![stack_tracing](https://user-images.githubusercontent.com/31779571/46980917-1cba8580-d0a4-11e8-97e7-8b68457279e0.png)
 
@@ -145,7 +145,7 @@ You also may have noticed that every logger lines up, right aligned. This makes 
 
 ## Options (colors and stack tracing)
 
-When a logger is created, you can also pass it a set of options that will change how the logger acts. Right now these can only be configures when the logger is created. Below is a list of current options and what they do.
+When a logger is created, you can also pass it a set of options that will change how the logger acts. Right now these can only be configured when the logger is created. Below is a list of current options and what they do.
 
 ```js
 const logger = require('easy-log')('app', { colorCode: 201, includeLineNumber: false });
@@ -169,9 +169,9 @@ const logger = require('easy-log')('app', { colorCode: 201, includeLineNumber: f
 
 ***
 
-**That's it! So far this is what I have. Beware, this is not yet tested on windows, linux, or browsers, and I may need to tweak things to make those all work. Once I do, I will realease the first 'real' version (1.0.0). Until then, it _should_ be stable, at least on Mac and in Node.js. 
+**That's it! So far this is what I have. Beware, this is not yet tested on windows, linux, or browsers, and I may need to tweak things to make those all work. **
 
-If you have a feature suggestion PLEASE let me know so I can incorporate it as quickly as possible. You can do so on my github, by following the Collaborating Guidelines I have and using the `issue` template I created: [Ask for a new feature](https://github.com/djpeach/easy-log/blob/master/Contributing-Guide.md)
+If you have a feature suggestion PLEASE let me know so I can incorporate it as quickly as possible. You can do so on my github, by following the Contributing Guidelines I have and using the `issue` template I created: [Ask for a new feature](https://github.com/djpeach/easy-log/blob/master/Contributing-Guide.md)
 
 # Color Codes
 
